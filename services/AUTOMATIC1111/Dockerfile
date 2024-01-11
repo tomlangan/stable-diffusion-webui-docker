@@ -40,7 +40,6 @@ RUN --mount=type=cache,target=/root/.cache/pip \
   cd .. 
 
 
-
 ENV ROOT=/stable-diffusion-webui
 
 COPY --from=download /repositories/ ${ROOT}/repositories/
@@ -70,6 +69,6 @@ RUN \
 WORKDIR ${ROOT}
 ENV NVIDIA_VISIBLE_DEVICES=all
 ENV CLI_ARGS=""
-EXPOSE 7880
+EXPOSE 7860
 ENTRYPOINT ["/docker/entrypoint.sh"]
-CMD python -u webui.py ${CLI_ARGS}
+CMD python -u webui.py --listen --port 7860 ${CLI_ARGS}
