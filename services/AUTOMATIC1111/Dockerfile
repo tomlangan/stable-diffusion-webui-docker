@@ -41,13 +41,13 @@ RUN --mount=type=cache,target=/cache --mount=type=cache,target=/root/.cache/pip 
 RUN --mount=type=cache,target=/root/.cache/pip \
   git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git && \
   cd stable-diffusion-webui && \
-  cd extensions && \
-  git clone https://github.com/NVIDIA/Stable-Diffusion-WebUI-TensorRT.git && \
-  cd .. && \
   git switch dev && \
   git pull && \
   git fetch && \
-  pip install -r requirements_versions.txt
+  pip install -r requirements_versions.txt && \
+  cd extensions && \
+  git clone https://github.com/NVIDIA/Stable-Diffusion-WebUI-TensorRT.git && \
+  cd .. 
 
 
 #  git reset --hard 20ae71faa8ef035c31aa3a410b707d792c8203a3 && \
