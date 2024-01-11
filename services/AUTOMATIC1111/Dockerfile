@@ -34,10 +34,7 @@ RUN --mount=type=cache,target=/root/.cache/pip \
   git switch dev && \
   git pull && \
   git fetch && \
-  pip install -r requirements_versions.txt && \
-  cd extensions && \
-  git clone https://github.com/tomlangan/Stable-Diffusion-WebUI-TensorRT.git && \
-  cd .. 
+  pip install -r requirements_versions.txt
 
 
 ENV ROOT=/stable-diffusion-webui
