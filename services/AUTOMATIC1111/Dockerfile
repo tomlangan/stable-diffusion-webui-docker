@@ -36,7 +36,7 @@ RUN --mount=type=cache,target=/root/.cache/pip \
   git fetch && \
   pip install -r requirements_versions.txt && \
   cd extensions && \
-  git clone https://github.com/NVIDIA/Stable-Diffusion-WebUI-TensorRT.git && \
+  git clone https://github.com/tomlangan/Stable-Diffusion-WebUI-TensorRT.git && \
   cd .. 
 
 
