@@ -33,7 +33,8 @@ RUN --mount=type=cache,target=/root/.cache/pip \
   cd stable-diffusion-webui && \
   git pull && \
   git fetch && \
-  pip install -r requirements_versions.txt
+  pip install -r requirements_versions.txt && \
+  pip install colored
   
   # git switch dev && \
 
